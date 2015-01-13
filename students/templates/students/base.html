@@ -48,15 +48,19 @@ href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 
 <!-- Start Content Columns -->
 <div class="row" id="content-columns">
-<div class="col-xs-12" id="content-column">
-{% comment "Not used alert so far" %}
-<div class="alert alert-warning" role="alert">Status Update!</div>
-{% endcomment %}
-<h2>{% block title %}{% endblock title %}</h2>
-{% block content %}{% endblock content %}
-</div>
+	<div class="col-xs-12" id="content-column">
+	{% comment "Not used alert so far" %}
+		<div class="alert alert-warning" role="alert">
+			{{ request.GET.status_message }}
+		</div>
+		{% endcomment %}
+		<h2>{% block title %}{% endblock title %}</h2>
+		{% block content %}{% endblock content %}
+	</div>
 </div>
 <!-- End Content Columns -->
+
+
 <!-- Start Footer -->
 <div class="row" id="footer">
 <div class="col-xs-12">

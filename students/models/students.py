@@ -3,6 +3,7 @@
 from django.db import models
 
 
+
 class Student(models.Model):
     """Student Model"""
 
@@ -50,6 +51,10 @@ class Student(models.Model):
     notes = models.TextField(
         blank=True,
         verbose_name=u"Додаткові нотатки")
+
+    # added by me
+    classes = models.ManyToManyField('Leson',verbose_name=u"Предмети")
+    #--
 
     def __unicode__(self):
         return u"%s %s" % (self.first_name, self.last_name)
