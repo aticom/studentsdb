@@ -41,6 +41,11 @@ href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <a href="/journal">Відвідування</a></li>
 <li role="presentation" {% if '/groups' in request.path %}class="active"{% endif %}>
 <a href="{% url "groups" %}">Групи</a></li>
+
+<li role="presentation" {% if '/contact-admin' in request.path %}class="active"{% endif %}>
+<a href="{% url "contact_admin" %}">Контакт</a></li>
+
+
 </ul>
 </div>
 </div>
